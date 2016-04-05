@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ed562d"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择常旅客"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="新增"
+            android:textColor="#ffffff"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/top_view"
+        android:background="#e1e1e1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="13dp"
+            android:layout_toLeftOf="@+id/begin_search"
+            android:background="#ffffff">
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:background="@null"
+                android:hint="请输入国家"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/begin_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="搜索"
+            android:textColor="#ed562d"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/search">
+
+        <com.emilsjolander.components.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:clipToPadding="false"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:layout_marginRight="30dp"
+            android:fastScrollEnabled="true"
+            android:scrollbarStyle="outsideOverlay"
+            tools:listitem="@layout/test_list_item_layout" />
+
+        <com.xiong.myconclusion.contact.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc"
+            android:layout_gravity="right" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_view"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_soubudao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sousuocuowu" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_soubudao"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/block_blue"
+            android:gravity="center"
+            android:text="新增乘机人"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#d8d8d8" />
+
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/block_blue"
+            android:gravity="center"
+            android:text="确 定"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
